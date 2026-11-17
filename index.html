@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Attendance Checker</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com8">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="tech-grid"></div>
+  <div class="scan-line"></div>
+  <div class="particles" id="particles"></div>
+
+  <main class="container">
+    <header class="hero">
+      <div class="system-label"><span class="live-dot"></span> SYSTEM ONLINE // ATTENDANCE MODULE</div>
+      <h1>ATTENDANCE <span>CHECKER</span></h1>
+      <p class="subtitle">OBJECT ORIENTED PROGRAMMING</p>
+      <div class="hero-details">
+        <span>INSTRUCTOR: JOMAR BALMORES</span>
+        <span class="system-version">CYBER SYSTEM v4.0</span>
+      </div>
+    </header>
+
+    <section class="control-panel">
+      <div>
+        <label for="attendanceDate">ATTENDANCE DATE</label>
+        <input type="date" id="attendanceDate">
+      </div>
+      <div>
+        <label for="searchInput">SEARCH STUDENT</label>
+        <div class="search-box">
+          <span>⌕</span>
+          <input id="searchInput" type="text" placeholder="Enter student name...">
+          <button id="clearSearch" type="button" aria-label="Clear search">×</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-grid">
+      <article class="stat-card total-card"><div class="stat-icon">◈</div><div><p>TOTAL STUDENTS</p><h2 id="totalCount">53</h2></div></article>
+      <article class="stat-card present-card"><div class="stat-icon">✓</div><div><p>PRESENT</p><h2 id="presentCount">0</h2></div></article>
+      <article class="stat-card absent-card"><div class="stat-icon">✕</div><div><p>ABSENT</p><h2 id="absentCount">0</h2></div></article>
+      <article class="stat-card excuse-card"><div class="stat-icon">!</div><div><p>EXCUSE</p><h2 id="excuseCount">0</h2></div></article>
+    </section>
+
+    <section class="progress-panel">
+      <div class="progress-heading">
+        <span>ATTENDANCE COMPLETION</span>
+        <strong id="progressText">0%</strong>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      <p id="markedText">0 of 53 students marked</p>
+    </section>
+
+    <section class="roster-section">
+      <div class="section-heading">
+        <div>
+          <span class="section-tag">DATABASE // STUDENT RECORDS</span>
+          <h2>STUDENT ROSTER</h2>
+        </div>
+        <span class="roster-count" id="rosterCount">53 RECORDS</span>
+      </div>
+      <div id="studentList" class="student-list"></div>
+      <div id="emptyMessage" class="empty-message hidden">
+        <span>⌕</span>
+        <h3>NO STUDENT FOUND</h3>
+        <p>Try searching another name.</p>
+      </div>
+    </section>
+
+    <section class="action-panel">
+      <button class="action-button finish-button" id="finishButton">✓ FINISH ATTENDANCE</button>
+      <button class="action-button pdf-button" id="pdfButton">▣ EXPORT PDF</button>
+      <button class="action-button reset-button" id="resetButton">↻ RESET ATTENDANCE</button>
+    </section>
+
+    <footer>
+      <p>CYBER ATTENDANCE SYSTEM <span>●</span> ALL RIGHTS RESERVED</p>
+      <p class="footer-sub">POWERED BY HTML • CSS • JAVASCRIPT</p>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
